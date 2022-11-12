@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <title>Fireblast</title>
+
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-spe-particles-component@1.0.4/dist/aframe-spe-particles-component.min.js"></script>
+
+ </head>
+ <body>
+    <a-scene>
+        <a-entity
+         position="0 1 0"
+         spe-particles="
+         color: red,orange,yellow,green,blue,cyan,white;
+         distribution: sphere;
+         randomize-velocity: true;
+         radius: 1;
+         particle-count: 10000;
+         velocity: 1;
+         velocity-spread: 25;
+         drag: 1,
+         max-age: 3;
+         duration: -3;
+         blending: additive;
+         active-multiplier: 50000;
+         size: 1,1,1,1,1,1,1"
+        >
+        </a-entity>
+
+        <a-sky color="black"></a-sky>
+        <a-camera position="0 0 27"></a-camera>
+    </a-scene>
+ </body>
+</html>
